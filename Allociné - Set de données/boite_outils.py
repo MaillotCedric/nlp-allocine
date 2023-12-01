@@ -14,14 +14,17 @@ def get_nombre_pages(url):
         }
     )
 
-    tout_index_pages_visibles = len(pagination.find_all("span")) == 1
+    if pagination:
+        tout_index_pages_visibles = len(pagination.find_all("span")) == 1
 
-    if tout_index_pages_visibles:
-        liens_pages = pagination.find_all("a")
+        if tout_index_pages_visibles:
+            liens_pages = pagination.find_all("a")
+        else:
+            liens_pages = pagination.find_all("span")
+
+        nombre_pages = int([lien.text for lien in liens_pages][-1])
     else:
-        liens_pages = pagination.find_all("span")
-
-    nombre_pages = int([lien.text for lien in liens_pages][-1])
+        nombre_pages = 0
 
     return nombre_pages
 
