@@ -3,6 +3,7 @@ attrs==23.1.0
 beautifulsoup4==4.12.2
 certifi==2023.7.22
 charset-normalizer==3.3.1
+click==8.1.7
 colorama==0.4.6
 comm==0.1.4
 contourpy==1.1.1
@@ -27,6 +28,7 @@ kiwisolver==1.4.5
 matplotlib==3.8.0
 matplotlib-inline==0.1.6
 nest-asyncio==1.5.8
+nltk==3.8.1
 numpy==1.26.1
 packaging==23.2
 pandas==2.1.2
@@ -54,6 +56,7 @@ soupsieve==2.5
 stack-data==0.6.3
 threadpoolctl==3.2.0
 tornado==6.3.3
+tqdm==4.66.1
 traitlets==5.13.0
 tzdata==2023.3
 tzlocal==5.2
